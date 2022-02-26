@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.bgimage {
+    width: 100vw;
+    height: 100%;
+    
+    /* Add a background image with blur */
+    background-image: url("../images/blackjack-5012424_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    /* Add a blur effect */
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+    
+    /* Add a black overlay */
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: -1;  
+}
+
+.playercardanimation {
+    -webkit-animation:rotateplayercard 2s linear infinite alternate;
+    -moz-animation:rotateplayercard 2s linear infinite alternate;
+    animation:rotateplayercard 2s linear infinite alternate;
+}
+@-moz-keyframes rotateplayercard { 0% { -moz-transform: rotate(-45deg); } 100% { -moz-transform: rotate(45deg); } }
+@-webkit-keyframes rotateplayercard { 0% { -moz-transform: rotate(-45deg); } 100% { -webkit-transform: rotate(45deg); } }
+@keyframes rotateplayercard {0% { -webkit-transform: rotate(-45deg); transform:rotate(-45deg); } 100% { -webkit-transform: rotate(45deg); transform:rotate(45deg); } }
+
+
+.computercardanimation {
+    -webkit-animation:rotatecomputercard 2s linear infinite alternate;
+    -moz-animation:rotatecomputercard 2s linear infinite alternate;
+    animation:rotatecomputercard 2s linear infinite alternate;
+}
+@-moz-keyframes rotatecomputercard { 0% { -moz-transform: rotate(45deg); } 100% { -moz-transform: rotate(-45deg); } }
+@-webkit-keyframes rotatecomputercard { 0% { -moz-transform: rotate(45deg); } 100% { -webkit-transform: rotate(-45deg); } }
+@keyframes rotatecomputercard {0% { -webkit-transform: rotate(45deg); transform:rotate(45deg); } 100% { -webkit-transform: rotate(-45deg); transform:rotate(-45deg); } }
+
+
+
+.cards-container {
+    position: absolute;
+}
+.gametitle {
+    font-size: 42px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 5px 3px 3px rgba(177, 12, 12, 0.74);
+    margin-bottom: 24px;
+}
+.cardsremaining {
+    font-size: 21px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom:12px;
+}
+
+.winnertxt {
+    font-size: 24px;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.685);
+}
+
+.finalwinnertxt {
+    font-size: 32px;
+    font-weight: 500;
+    color: #ffffff;
+    /* Add Text Shadow */
+    text-shadow: 2px 2px 1px black;
+
+    text-align: center;
+    margin-top:20px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 720px;
+}
+
+.displaycard {
+    /* margin-top: 24px; */
+    padding: 12px 16px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.displaycard img {
+    padding-top:20px;
+    width: 100%;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+}
+
+.player span {
+    margin-top: 14px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top:16px;
+}
+
+button {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgb(16, 70, 141);
+    padding: 14px 36px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: rgb(12, 60, 122);
+    color: #fff;
+}
+
+button:active {
+    background-color: rgb(12, 60, 122);
+    color: #fff;
+    box-shadow: 0 2px 1px rgb(11, 53, 109);
+    transform: scaleX(1.02);
+}
+
+.hideme {
+    display: none;
+}

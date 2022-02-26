@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deck of Cards</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="bgimage"></div>
+
+    <div class="cards-container">
+        <div class="cardsremaining hideme">Cards Remaining: <span id="remainingcards"></span></div>
+        <div class="gametitle" id="gametitle">Game of War</div>
+        <div class="container">
+            <div class="displaycard">
+                <div class="player">Player<br><span id="playerdrawswon"></span></div>
+                <img src="./images/card-game-48980.png" alt="" id="playercard">
+            </div>
+            <div class="displaycard">
+                <div class="player">Computer<br><span id="computerdrawswon"></span></div>
+                <img src="./images/card-game-48983.png" alt="" id="computercard">
+            </div>
+        </div>
+    
+        
+        <div class="winnertxt" id="winner"></div>
+        <div class="buttons">
+            <button id="newdeck">New Deck</button>
+            <button class="hideme" id="drawcards">Draw Card</button>
+            <button class="hideme" id="restart">Restart</button>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
